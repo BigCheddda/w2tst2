@@ -1,6 +1,6 @@
 <html>
 <body>
-    <p>Username:</p>
+    <p id="yes">Username:</p>
 
 <input id="numb">
 
@@ -9,10 +9,12 @@
 <p id="demo"></p>
 
 <script>
+    function myFunction(selectTag) {
+  var listValue = selectTag.options[selectTag.selectedIndex].text;
+  document.getElementById("yes").style.fontSize = 100px;
+}
 function myFunction() {
-  // Get the value of the input field with id="numb"
   let x = document.getElementById("numb").value;
-  // If x is Not a Number or less than one or greater than 10
   let text;
   if (isNaN(x) || x < 32556 || x > 32558) {
     text = "Incorrect Username or Password";
